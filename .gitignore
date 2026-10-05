@@ -1,0 +1,30 @@
+# Raw training datasets and large corpora
+linux/assets/dict/dakshina_hi/
+linux/assets/dict/raw/
+linux/assets/dict/hi_complete_corpus.tsv
+*.zip
+*.tar
+*.tar.gz
+
+# Build outputs and temporary packaging directories
+linux/build_deb_tmp/
+linux/bin/
+linux/lib/
+linux/dist/
+dist/
+*.o
+*.so
+*.deb
+
+# Fonts (Ubuntu provides fonts-noto-core natively)
+linux/assets/fonts/
+
+# Keep compiled binary dictionary
+!linux/assets/dict/hi_t13n.bin
+
+# OS & Editor files
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/

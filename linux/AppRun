@@ -1,0 +1,32 @@
+#!/bin/bash
+# Portable AppRun for Google Input Tools Linux (Pure Native C++)
+# Zero GUI - Headless IBus engine daemon & CLI typing tool
+# Zero latency, microsecond response, complete Devanagari dictionary!
+
+set -e
+
+APPDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# If argument --ibus is passed, run native C++ IBus engine
+if [ "$1" = "--ibus" ]; then
+    if [ -x "${APPDIR}/bin/ibus-engine-google-input-tools" ]; then
+        exec "${APPDIR}/bin/ibus-engine-google-input-tools" "$@"
+    elif [ -x "${APPDIR}/usr/libexec/ibus-engine-google-input-tools" ]; then
+        exec "${APPDIR}/usr/libexec/ibus-engine-google-input-tools" "$@"
+    elif [ -x "${APPDIR}/usr/bin/ibus-engine-google-input-tools" ]; then
+        exec "${APPDIR}/usr/bin/ibus-engine-google-input-tools" "$@"
+    else
+        echo "Error: Native IBus binary ibus-engine-google-input-tools not found!" >&2
+        exit 1
+    fi
+fi
+
+# Run Native C++ Headless CLI Tool
+if [ -x "${APPDIR}/bin/git-cli" ]; then
+    exec "${APPDIR}/bin/git-cli" "$@"
+elif [ -x "${APPDIR}/usr/bin/git-cli" ]; then
+    exec "${APPDIR}/usr/bin/git-cli" "$@"
+fi
+
+echo "Error: Native C++ binary git-cli not found! Please run 'make -C linux' first." >&2
+exit 1

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component>
+    <name>org.freedesktop.IBus.GoogleInputTools</name>
+    <description>Google Input Tools Native Linux Component</description>
+    <version>1.0.0</version>
+    <author>Anshu Sharma</author>
+    <license>Apache-2.0</license>
+    <homepage>https://github.com/anshu4sharma/google-input-tools-linux</homepage>
+    <exec>/usr/libexec/ibus-engine-google-input-tools --ibus</exec>
+    <textdomain>google-input-tools</textdomain>
+    <engines>
+        <engine>
+            <name>google-input-tools-hindi</name>
+            <language>hi</language>
+            <license>Apache-2.0</license>
+            <author>Anshu Sharma</author>
+            <icon>/usr/share/icons/hicolor/scalable/apps/google-input-tools.svg</icon>
+            <layout>us</layout>
+            <longname>Hindi (Google Input Tools)</longname>
+            <description>Hindi Phonetic Transliteration Engine (Google Input Tools)</description>
+            <rank>99</rank>
+        </engine>
+    </engines>
+</component>

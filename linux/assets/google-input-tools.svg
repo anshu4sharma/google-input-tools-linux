@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#1A73E8"/>
+      <stop offset="100%" stop-color="#0D47A1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background Rounded Rect -->
+  <rect x="8" y="8" width="112" height="112" rx="26" ry="26" fill="url(#bg)" filter="url(#shadow)"/>
+  
+  <!-- Subtle inner border -->
+  <rect x="9" y="9" width="110" height="110" rx="25" ry="25" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Devanagari character 'अ' representing Hindi Input Tools -->
+  <text x="64" y="86" font-family="'Noto Sans Devanagari', 'Lohit Devanagari', 'Gargi', 'Mangal', 'Sans', sans-serif" font-size="64" font-weight="bold" fill="#FFFFFF" text-anchor="middle">अ</text>
+
+  <!-- Keyboard accent indicator at bottom -->
+  <circle cx="48" cy="104" r="3" fill="#34A853"/>
+  <circle cx="64" cy="104" r="3" fill="#FBBC05"/>
+  <circle cx="80" cy="104" r="3" fill="#EA4335"/>
+</svg>
